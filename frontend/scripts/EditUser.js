@@ -14,7 +14,7 @@ const userId = urlParams.get("id");
 
 async function getUserById(id) {
     try {
-        const response = await fetch(`http://localhost:5000/users/${id}`);
+        const response = await fetch(`https://basic-js-curd.onrender.com/${id}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
