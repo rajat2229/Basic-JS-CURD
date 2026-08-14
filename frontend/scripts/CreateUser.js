@@ -20,7 +20,7 @@ registerForm.addEventListener("submit", async (e) => {
     passwordInput.value = "";
 
     // send new user to database /backend
-    await fetch("http://localhost:5000/users", {
+    await fetch("https://basic-js-curd.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -29,7 +29,7 @@ registerForm.addEventListener("submit", async (e) => {
     });
 
     // fetch all users from database /backend
-    const response = await fetch("http://localhost:5000/users");
+    const response = await fetch("https://basic-js-curd.onrender.com");
     const users = await response.json();
     console.log(users);
 

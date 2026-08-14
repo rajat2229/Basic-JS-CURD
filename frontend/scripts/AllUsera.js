@@ -2,7 +2,7 @@ const userscontainer = document.querySelector("#userContainer");
 
 async function getAllUsers() {
     try {
-        const response = await fetch("http://localhost:5000/users");
+        const response = await fetch("https://basic-js-curd.onrender.com");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -38,7 +38,7 @@ document.getElementById("getAllUsers").addEventListener("click", getAllUsers);
 
 async function deleteUser(id) {
     try {
-        const response = await fetch(`http://localhost:5000/users/${id}`, {
+        const response = await fetch(`https://basic-js-curd.onrender.com/${id}`, {
             method: "DELETE",
         });
         if (!response.ok) {

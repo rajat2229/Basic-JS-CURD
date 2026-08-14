@@ -64,7 +64,7 @@ editForm.addEventListener("submit", async (event) => {
     console.log("Updating user:", updatedUser);
 
     try {
-        const response = await fetch(`http://localhost:5000/users/${userId}`, {
+        const response = await fetch(`https://basic-js-curd.onrender.com/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
