@@ -2,7 +2,7 @@ const userscontainer = document.querySelector("#userContainer");
 
 async function getAllUsers() {
     try {
-        const response = await fetch("https://basic-js-curd.onrender.com");
+        const response = await fetch("https://basic-js-curd.onrender.com/users");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -21,7 +21,7 @@ function displayUsers(users) {
         userDiv.innerHTML = `
             <figure class='user-figure'>${user.username[0].toUpperCase()}</figure>
              <!--<h1>Id: ${user.id}</h1>-->
-            <h2>Name:${user.username}</h2>
+            <h2>${user.username}</h2>
             <p>Email: ${user.email}</p>
              <!-- show encripted password -->
             
@@ -38,7 +38,7 @@ document.getElementById("getAllUsers").addEventListener("click", getAllUsers);
 
 async function deleteUser(id) {
     try {
-        const response = await fetch(`https://basic-js-curd.onrender.com/${id}`, {
+        const response = await fetch(`https://basic-js-curd.onrender.com/users/${id}`, {
             method: "DELETE",
         });
         if (!response.ok) {

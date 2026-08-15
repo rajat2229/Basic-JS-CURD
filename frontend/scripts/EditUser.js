@@ -14,7 +14,7 @@ const userId = urlParams.get("id");
 
 async function getUserById(id) {
     try {
-        const response = await fetch(`https://basic-js-curd.onrender.com/${id}`);
+        const response = await fetch(`https://basic-js-curd.onrender.com/users/${id}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -64,7 +64,7 @@ editForm.addEventListener("submit", async (event) => {
     console.log("Updating user:", updatedUser);
 
     try {
-        const response = await fetch(`https://basic-js-curd.onrender.com/${userId}`, {
+        const response = await fetch(`https://basic-js-curd.onrender.com/users/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

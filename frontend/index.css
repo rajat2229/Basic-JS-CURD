@@ -124,14 +124,26 @@ a{
 #userContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
     margin-top: 20px;
+}
+.user-card {
+    width: 200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 .user-figure{
     height: 50px;
     width: 50px;
-    padding: 15px;
     background-color: white;
     border-radius: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: red;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
